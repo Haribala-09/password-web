@@ -1,0 +1,97 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Just it</title>
+    </head>
+    <style>
+        .get {
+            background-color: rgb(178, 7, 7);
+            color: white;
+            border: none;
+            height: 34px;
+            width: 100px;
+            font-size: 16px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: opacity 1s;
+        }
+
+        .go {
+            background-color: white;
+            color: rgb(13, 81, 227);
+            border-color: rgb(13, 81, 227);
+            border-style: solid;
+            border-width: 1px;
+            height: 40px;
+            width: 90px;
+            font-size: 16px;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: background-color 1s;
+        }
+
+        .twe {
+            background-color: rgb(12, 160, 229);
+            color: white;
+            border-color: rgb(83, 191, 207);
+            border-style: double;
+            border-width: 1px;
+            height: 40px;
+            width: 90px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 45px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .go:hover {
+            background-color: rgb(13, 81, 227);
+            color: white;
+
+        }
+
+        .get:hover {
+            opacity: 0.2;
+        }
+
+        .get:active {
+            background-color: aqua;
+        }
+
+        .go:active {
+            opacity: 0.8;
+        }
+    </style>
+
+    <body>
+        <button class="get" onclick="handleButtonClick(this)">Get it</button>
+        <button class="go" onclick="handleButtonClick(this)">Go</button>
+        <button class="twe" onclick="handleButtonClick(this)">Tweet</button>
+
+        <script>
+            // JavaScript code
+            function handleButtonClick(button) {
+                if (button.classList.contains("get")) {
+                    alert("Get it button clicked!");
+                } else if (button.classList.contains("go")) {
+                    alert("Go button clicked!");
+                } else if (button.classList.contains("twe")) {
+                    alert("Tweet button clicked!");
+                }
+    
+                button.classList.add("clicked");
+    
+                setTimeout(function () {
+                    button.classList.remove("clicked");
+                }, 1000);
+            }
+        </script>
+    </body>
+
+    </html>
